@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="vearbeitung.php" method="post">
+    <label for="vorname">Vorname</label><br>
+    <input type="text" name="vorname" id="vorname"><br>
+    <label for="nachname">Nachname</label><br>
+    <input type="text" name="nachname" id="nachname" value="Susi" size="25" maxlength="20">
+    <input type="text" name="strasse" placeholder="Hier Ihre Straße eingeben">
+    <input type="text" name="hausnummer" size="3" minlength="1" maxlength="4"
+    <input type="password" name="password">
+    <input type="date" name="datum">
+    <input type="email" name="email">
+    <input type="color" name="farbe">
+    <textarea name="nachricht" row="10" cols="40">Mein Kuchenrezept</textarea><br>
+    <select name="studiengang">
+        <option value="nix">Bitte wählen</option>
+        <option value="wi">WI</option>
+        <option value="om">OM</option>
+    </select>
+<br>
+        <label for="omm">OMM</label>
+        <input type="radio" name="fach" id="omm" value="omm"><br>
+        <label for="wi">WI</label>
+        <input type="radio" name="fach" id="wi" value="wi"><br>
+        <label for="anderes">Anderes</label>
+        <input type="radio" name="fach" id="anderes" value="anderes">
+        <input type="range" name="wunschnote" min="1" max="5" step="0.5"><br>
+    <input list="programs" name="studiengang">
+    <datalist id="programs">
+        <option value="Online-Medien-Management">
+        <option value="Wirtschaftsinformatik">
+        <option value="Informationsdesign">
+    </datalist>
+    <input name="studiengang2" pattern="[A-Z][A-Z][0-9]"/>
+    <input type="submit" value="Riemke's Quatsch absenden">
+    <button type="submit">Absenden</button>
+</form>
+</body>
+</html>
