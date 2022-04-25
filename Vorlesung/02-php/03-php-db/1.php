@@ -10,7 +10,7 @@
 <body>
 <?php
 
-$pdo = new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de; dbname=dbname', 'username', 'passwort', array('charset' => 'utf8'));
+$pdo = new PDO();
 $statement= $pdo->prepare("SELECT * FROM hunde");
 $statement->execute();
 while($row=$statement->fetch()) {

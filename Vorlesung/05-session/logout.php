@@ -1,3 +1,7 @@
+<?php
+session_start();
+session_destroy();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,15 +12,6 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-$pdo=new PDO();
-$statement=$pdo->prepare("INSERT INTO user (login, password, email, vorname, nachname) VALUES(?,?,?,?,?)");
-if($statement->execute(array("mueller", "abc", "m0712@hdm-stuttgart.de","Horst", "Müller"))){
-    echo "Datensatz eingetragen";
-}else{
-    echo $statement->errorInfo()[2];
-}
-
-?>
+Erfolgreich abgemeldet!
 </body>
 </html>

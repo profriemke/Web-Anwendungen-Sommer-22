@@ -10,19 +10,16 @@
 <body>
 <?php
 $pdo=new PDO();
-$statement = $pdo->prepare("SELECT * FROM usser");
-if($statement->execute()) {
-    echo $statement->rowCount();
-    while ($row = $statement->fetch()) {
-        echo $row["vorname"] . " " . $row["email"] . "<br>";
-    }
-}   else {
+$statement=$pdo->prepare("INSERT INTO user (login, password) VALUES (:login, :password)");
+$statement->bindParam(":login", $_POST["login"]);
+$password = password_hash($_POST["password"],PASSWORD_BCRYPT);
+$statement->bindParam(":password", $password);
+if($statement->execute()){
+    echo "eintragen erfolgsreich";
+}else{
+    echo "hat nicht ganz geklappt";
     echo $statement->errorInfo()[2];
-   // var_dump($statement->errorInfo());
-    echo $statement->queryString;
-    die("Datenbank Fehler");
 }
 ?>
-
 </body>
 </html>

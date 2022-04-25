@@ -8,15 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-$pdo=new PDO();
-$statement=$pdo->prepare("INSERT INTO user (login, password, email, vorname, nachname) VALUES(?,?,?,?,?)");
-if($statement->execute(array("mueller", "abc", "m0712@hdm-stuttgart.de","Horst", "Müller"))){
-    echo "Datensatz eingetragen";
-}else{
-    echo $statement->errorInfo()[2];
-}
+<form action="register_do.php" method="post">
+    <input type="text" name="login">
+    <input type="password" name="password">
+    <input type="submit">
 
-?>
+</form>
 </body>
 </html>
