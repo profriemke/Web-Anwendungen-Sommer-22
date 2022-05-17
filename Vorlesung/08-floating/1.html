@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <style>
+       #box1{
+           width:100px;
+           height:100px;
+           background-color: red;
+           float: left;
+       }
+       #box2{
+           width:100px;
+           height:100px;
+           background-color: green;
+           float: left;
+
+       }
+       #box3{
+           width:100px;
+           height:100px;
+           background-color: blue;
+           clear: both;
+       }
+       #rahmen{
+           border: 1px solid;
+       }
+
+       .clearfix:after {
+           content: ".";
+           display: block;
+           clear: both;
+           font-size: 0;
+           height: 0;
+           visibility: hidden;
+       }
+   </style>
+</head>
+<body>
+<div id="rahmen" class="clearfix">
+    <div id="box1"></div>
+    <div id="box2"></div>
+</div>
+<div id="box3"></div>
+</body>
+</html>
