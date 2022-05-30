@@ -1,11 +1,12 @@
 <?php
-$ext= pathinfo($_FILES["datei"]["name"], PATHINFO_EXTENSION);
+
 if(empty($_FILES["datei"])){
     die("Problem in der Datei");
 }
 if(empty($_FILES["datei"]["name"])){
     die("Problem in der Datei");
 }
+$ext= pathinfo($_FILES["datei"]["name"], PATHINFO_EXTENSION);
 if($ext!="jpg"){
     die("falscher Dateityp");
 }
