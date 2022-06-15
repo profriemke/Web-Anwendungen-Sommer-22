@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Überschrift</h1>
+<button onclick="einaus();">ein/aus</button><br>
+<button onclick="$('h1').toggle();">toggle</button><br>
+<button onclick="$('h1').fadeToggle('slow','linear');">fade toggle</button><br>
+<button onclick="$('h1').css('color','red');">rot</button><br>
+<button onclick="$('h1').css('color','green');">grün</button><br>
+<button onclick="$('h1').css('font-family','sans-serif');">sans</button>
+<button onclick="$('h1').animate({ 'left:‚100px', 'bottom: ‚100px' });">animate!</button>
+<button onclick="$('h1').html('Inhalt anders!')">Inhalt anders!</button>
+<script>
+    var ein=true;
+    function einaus(){
+        if(ein){
+            $('h1').hide();
+        }else{
+            $('h1').show();
+        }
+        ein = !ein;
+    }
+</script>
+</body>
+</html>

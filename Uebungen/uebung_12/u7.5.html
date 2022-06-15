@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="ausgeben(8);">gibs 8x aus!</button><button onclick="ausgeben(3);">gibs 3x aus!</button>
+<button onclick="ausgeben(100);">gibs 100x aus!</button>
+<script>
+    function ausgeben(anzahl) {
+        for (let i = 1; i <= anzahl; i++) {
+            document.write(i + ". Hallo <br>");
+        }
+    }
+</script>
+</body>
+</html>
