@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+<div id="temp">--</div> C<br>
+<div id="co2">--</div> ppm<br>
+<div id="date">--</div><br>
+<button id="load">laden</button>
+<script>
+    $("#load").click(function(){
+      $.getJSON("https://demo.riemke.dev/api/air/get/", function(result){
+          console.log(result[0].temp);
+        $("#temp").html(result[0].temp/100);
+          $("#co2").html(result[0].air);
+          $("#date").html(result[0].date);
+          }
+      );
+
+    });
+</script>
+</body>
+</html>
